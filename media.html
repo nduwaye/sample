@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="media.css">
+</head>
+<body>
+    <header class="header">
+        <h1>LOGO</h1>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="menu-icon" id="menu-icon">&#9776;</div>
+    </header>
+
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header" id="sidebar-header">
+            <h1>Menu</h1>
+            <div class="close-icon" id="close-icon">&times;</div>
+        </div>
+        <ul class="sidebar-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+    <main class="main-content" id="main-content">
+        <p>This is my first paragraph on this web page. It contains some introductory text about the content.</p>
+    </main>
+
+    <script>
+        const menuIcon = document.getElementById('menu-icon');
+        const sidebar = document.getElementById('sidebar');
+        const closeIcon = document.getElementById('close-icon');
+        const sidebarHeader = document.getElementById('sidebar-header');
+        const mainContent = document.getElementById('main-content');
+
+        menuIcon.addEventListener('click', () => {
+            sidebar.classList.add('active');
+            closeIcon.classList.add('active');
+            sidebarHeader.classList.add('active');
+            mainContent.style.marginLeft = '250px';
+            
+        });
+
+        closeIcon.addEventListener('click', () => {
+            sidebar.classList.remove('active');
+            closeIcon.classList.remove('active');
+            sidebarHeader.classList.remove('active');
+            mainContent.style.marginLeft = '0';
+        });
+    </script>
+</body>
+</html>
