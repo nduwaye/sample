@@ -5,6 +5,145 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Website</title>
     <link rel="stylesheet" href="media.css">
+    <style>
+
+
+             body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #e9ecef;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-links li {
+            margin-right: 20px;
+        }
+        .nav-links li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+        .nav-links li a:hover {
+            color: #12f15c;
+            font-size: 20px;
+            font-style: normal;
+            text-decoration: underline;
+            transition: 5s;
+        }
+        .menu-icon {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 10px;
+        }
+        /* Styles for the sidebar */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -250px;
+            width: 0px;
+            height: 100%;
+            background-color: #f8f9fa;
+            border-right: 1px solid #ddd;
+            transition: left 0.3s ease-in-out;
+            overflow-y: auto;
+            padding-top: 60px;
+        }
+        .sidebar.active {
+            left: 0;
+        }
+         .sidebar-header {
+            position: fixed;
+            top: 0;
+            left: -250px;
+            width: 230px;
+            height: 50px;
+            background-color: #e9ecef;
+            border-bottom: 1px solid #ddd;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: left 0.3s ease-in-out;
+        }
+
+        .sidebar-header.active{
+             left: 0;
+        }
+
+        .sidebar-header h1{
+            font-size: 18px;
+            margin: 0;
+        }
+
+        .close-icon {
+            font-size: 24px;
+            cursor: pointer;
+            padding: 10px;
+        }
+        .sidebar-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .sidebar-links li {
+            padding: 10px 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        .sidebar-links li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+        .sidebar-links li a:hover {
+            color: #007bff;
+        }
+        .main-content {
+            margin-left: 0;
+            transition: margin-left 0.3s ease-in-out;
+            padding: 20px;
+        }
+     /*style for the media quarry*/   
+  @media (max-width: 768px) {
+          .nav-links {
+                display: none;
+                color: black;
+            }
+            .menu-icon {
+                display: block;
+                color: rgb(8, 50, 236);
+            }
+            .sidebar {
+                display: block;
+                background-color: grey;
+                color: #ddd;
+            }
+             .sidebar-header{
+                display: flex;
+                overflow-x: hidden;
+                background-color: #007bff;
+            }
+            .main-content {
+                padding-left: 20px;
+            }
+       }
+     </style>   
 </head>
 <body>
     <header class="header">
